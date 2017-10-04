@@ -166,7 +166,7 @@ namespace Product
 
         }
 
-         public void DisplayAfterDeletion3(int num1,int num2)
+        public void DisplayAfterDeletion3(int num1,int num2)
         {
             try
             {
@@ -184,6 +184,55 @@ namespace Product
                         if(product1.ProductGroupID==product2.GroupID)
                         {
                             Console.WriteLine("Product Group Name: " +product1.ProductGroupName+ " || Product Name: " +product2.ProductName+ " || Product Description: " +product2.ProductDescription+ " || Product Rate: " +product2.ProductRate);
+                        }
+                    }
+                }
+
+            }
+
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
+
+         public void DisplayAfterDeletion4(string delete)
+        {
+            try
+            {
+                ProductDetailsFill objProductDetailsFill= new ProductDetailsFill();
+
+                List<ProductGroup> objListProductGroup = objProductDetailsFill.ProductGroupFill();
+                List<ProductInfo> objListproductInfo = objProductDetailsFill.ProductFill();
+                
+                bool flag = false;
+                
+                foreach(ProductInfo testProduct in objListproductInfo)
+                {
+                    if(testProduct.ProductName.Trim().ToUpper()==(delete.Trim().ToUpper()))
+                    {
+                        flag=true;
+                        break;
+                    }
+                }
+                
+                if(flag==false){
+                    Console.WriteLine("Invalid product name");
+                }
+                
+                else
+                {
+                    List<ProductInfo> objProductDelete4= objProductDetailsFill.ProductDelete4(objListproductInfo, delete);
+                
+                    foreach(ProductGroup product1 in objListProductGroup)
+                    {
+                        foreach(ProductInfo product2 in objProductDelete4)
+                        {
+                            if(product1.ProductGroupID==product2.GroupID)
+                            {
+                                Console.WriteLine("Product Group Name: " +product1.ProductGroupName+ " || Product Name: " +product2.ProductName+ " || Product Description: " +product2.ProductDescription+ " || Product Rate: " +product2.ProductRate+"Reached");
+                            }
                         }
                     }
                 }

@@ -79,7 +79,7 @@ namespace Product
             {
                 GroupID=FindGroup.FindID("Chocolate"),
                 ProductID=4,
-                ProductName="Nestle bar",
+                ProductName="Nestle Bar",
                 ProductDescription="Nestle bar 180g",
                 ProductRate=120,
             };
@@ -166,17 +166,31 @@ namespace Product
         }
 
         public List<ProductInfo> ProductDelete2(List<ProductInfo> ProductInfo, int num)
-        {    
-            ProductInfo.RemoveAt(num);
-            return ProductInfo;
+        {   
+            
+                
+                ProductInfo.RemoveAt(num);
+                return ProductInfo;
+                
+               
         } 
 
         
         public List<ProductInfo> ProductDelete3(List<ProductInfo> ProductInfo,int start, int end)
-        {
-            ProductInfo.RemoveRange(start, end);
-            return ProductInfo;
+        {           
+            
+                
+                ProductInfo.RemoveRange(start, end);
+                return ProductInfo;
+              
         }
-                           
+
+        public List<ProductInfo> ProductDelete4(List<ProductInfo> ProductInfo, string delete)
+        {
+                
+                ProductInfo.RemoveAll(p =>p.ProductName.ToUpper()==delete.ToUpper());
+                return ProductInfo;
+                
+        }            
     }
 }
