@@ -7,17 +7,17 @@ namespace Product
     public class Display
     {
         
-        public void DisplaySortProd()
+        public void DisplaySortedProducts()
         {
             try
             {
             ProductDetailsFill objProductDetailsFill= new ProductDetailsFill();
 
-            List<ProductGroup> PGroup = objProductDetailsFill.ProductGroupFill();
-            List<ProductInfo> PInfo = objProductDetailsFill.ProductFill();
-            IEnumerable<ProductInfo> EnumProductInfo = objProductDetailsFill.ProductSort(PInfo);
+            List<ProductGroup> objListProductGroup = objProductDetailsFill.ProductGroupFill();
+            List<ProductInfo> objListproductInfo = objProductDetailsFill.ProductFill();
+            IEnumerable<ProductInfo> EnumProductInfo = objProductDetailsFill.ProductSort(objListproductInfo);
 
-            foreach(ProductGroup product1 in PGroup)
+            foreach(ProductGroup product1 in objListProductGroup)
             {
                 foreach(ProductInfo product2 in EnumProductInfo)
                 {
@@ -43,12 +43,12 @@ namespace Product
             {
             ProductDetailsFill objProductDetailsFill= new ProductDetailsFill();
 
-            List<ProductGroup> PGroup = objProductDetailsFill.ProductGroupFill();
-            List<ProductInfo> PInfo = objProductDetailsFill.ProductFill();
+            List<ProductGroup> objListProductGroup = objProductDetailsFill.ProductGroupFill();
+            List<ProductInfo> objListproductInfo = objProductDetailsFill.ProductFill();
 
-            foreach(ProductGroup product1 in PGroup)
+            foreach(ProductGroup product1 in objListProductGroup)
             {
-                foreach(ProductInfo product2 in PInfo)
+                foreach(ProductInfo product2 in objListproductInfo)
                 {
                     if(product1.ProductGroupID==product2.GroupID)
                     {
@@ -77,14 +77,14 @@ namespace Product
                 {
                 ProductDetailsFill objProductDetailsFill= new ProductDetailsFill();
 
-                List<ProductGroup> PGroup = objProductDetailsFill.ProductGroupFill();
-                List<ProductInfo> PInfo = objProductDetailsFill.ProductFill();
+                List<ProductGroup> objListProductGroup = objProductDetailsFill.ProductGroupFill();
+                List<ProductInfo> objListproductInfo = objProductDetailsFill.ProductFill();
 
-                var res=PInfo.Where(p =>p.ProductName.ToUpper().Contains(search.ToUpper()));
+                var result=objListproductInfo.Where(p =>p.ProductName.ToUpper().Contains(search.ToUpper()));
 
-                foreach(ProductGroup product1 in PGroup)
+                foreach(ProductGroup product1 in objListProductGroup)
                 {
-                    foreach(ProductInfo product2 in res)
+                    foreach(ProductInfo product2 in result)
                     {
                         if(product1.ProductGroupID==product2.GroupID)
                         {
@@ -110,14 +110,14 @@ namespace Product
             {
             ProductDetailsFill objProductDetailsFill= new ProductDetailsFill();
 
-            List<ProductGroup> PGroup = objProductDetailsFill.ProductGroupFill();
-            List<ProductInfo> PInfo = objProductDetailsFill.ProductFill();
+            List<ProductGroup> objListProductGroup = objProductDetailsFill.ProductGroupFill();
+            List<ProductInfo> objListproductInfo = objProductDetailsFill.ProductFill();
 
-            List<ProductInfo> PDel1= objProductDetailsFill.ProductDelete1(PInfo);
+            List<ProductInfo> objProductDelete1= objProductDetailsFill.ProductDelete1(objListproductInfo);
 
-            foreach(ProductGroup product1 in PGroup)
+            foreach(ProductGroup product1 in objListProductGroup)
             {
-                foreach(ProductInfo product2 in PDel1)
+                foreach(ProductInfo product2 in objProductDelete1)
                 {
                     if(product1.ProductGroupID==product2.GroupID)
                     {
@@ -141,14 +141,14 @@ namespace Product
             {
             ProductDetailsFill objProductDetailsFill= new ProductDetailsFill();
 
-            List<ProductGroup> PGroup = objProductDetailsFill.ProductGroupFill();
-            List<ProductInfo> PInfo = objProductDetailsFill.ProductFill();
+            List<ProductGroup> objListProductGroup = objProductDetailsFill.ProductGroupFill();
+            List<ProductInfo> objListproductInfo = objProductDetailsFill.ProductFill();
 
-            List<ProductInfo> PDel2= objProductDetailsFill.ProductDelete2(PInfo, num);
+            List<ProductInfo> objProductDelete2= objProductDetailsFill.ProductDelete2(objListproductInfo, num);
 
-            foreach(ProductGroup product1 in PGroup)
+            foreach(ProductGroup product1 in objListProductGroup)
             {
-                foreach(ProductInfo product2 in PDel2)
+                foreach(ProductInfo product2 in objProductDelete2)
                 {
                     if(product1.ProductGroupID==product2.GroupID)
                     {
@@ -172,14 +172,14 @@ namespace Product
             {
             ProductDetailsFill objProductDetailsFill= new ProductDetailsFill();
 
-            List<ProductGroup> PGroup = objProductDetailsFill.ProductGroupFill();
-            List<ProductInfo> PInfo = objProductDetailsFill.ProductFill();
+            List<ProductGroup> objListProductGroup = objProductDetailsFill.ProductGroupFill();
+            List<ProductInfo> objListproductInfo = objProductDetailsFill.ProductFill();
 
-            List<ProductInfo> PDel3= objProductDetailsFill.ProductDelete3(PInfo, num1, num2);
+            List<ProductInfo> objProductDelete3= objProductDetailsFill.ProductDelete3(objListproductInfo, num1, num2);
 
-            foreach(ProductGroup product1 in PGroup)
+            foreach(ProductGroup product1 in objListProductGroup)
             {
-                foreach(ProductInfo product2 in PDel3)
+                foreach(ProductInfo product2 in objProductDelete3)
                 {
                     if(product1.ProductGroupID==product2.GroupID)
                     {

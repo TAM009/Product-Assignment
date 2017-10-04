@@ -31,7 +31,7 @@ namespace Product
                                break;
 
                         case 2:Console.WriteLine("--------------------------------------------");
-                               objDisplay.DisplaySortProd();
+                               objDisplay.DisplaySortedProducts();
                                break;
 
                         case 3:Console.WriteLine("--------------------------------------------");
