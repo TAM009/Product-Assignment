@@ -11,19 +11,19 @@ namespace Product
         {
             try
             {
-            ProductDetailsFill pf= new ProductDetailsFill();
+            ProductDetailsFill objProductDetailsFill= new ProductDetailsFill();
 
-            List<ProductGroup> PGroup = pf.ProductGroupFill();
-            List<ProductInfo> PInfo = pf.ProductFill();
-            IEnumerable<ProductInfo> p = pf.ProductSort(PInfo);
+            List<ProductGroup> PGroup = objProductDetailsFill.ProductGroupFill();
+            List<ProductInfo> PInfo = objProductDetailsFill.ProductFill();
+            IEnumerable<ProductInfo> EnumProductInfo = objProductDetailsFill.ProductSort(PInfo);
 
-            foreach(ProductGroup prod1 in PGroup)
+            foreach(ProductGroup product1 in PGroup)
             {
-                foreach(ProductInfo prod2 in p)
+                foreach(ProductInfo product2 in EnumProductInfo)
                 {
-                    if(prod1.ProductGroupID==prod2.GroupID)
+                    if(product1.ProductGroupID==product2.GroupID)
                     {
-                        Console.WriteLine("Product Group Name: "+prod1.ProductGroupName+" || Product Name: "+prod2.ProductName+" || Product Description: "+prod2.ProductDescription+" || Product Rate: "+prod2.ProductRate);
+                        Console.WriteLine("Product Group Name: "+product1.ProductGroupName+" || Product Name: "+product2.ProductName+" || Product Description: "+product2.ProductDescription+" || Product Rate: "+product2.ProductRate);
                     }
                 }
             }
@@ -41,18 +41,18 @@ namespace Product
         {
             try
             {
-            ProductDetailsFill pf= new ProductDetailsFill();
+            ProductDetailsFill objProductDetailsFill= new ProductDetailsFill();
 
-            List<ProductGroup> PGroup = pf.ProductGroupFill();
-            List<ProductInfo> PInfo = pf.ProductFill();
+            List<ProductGroup> PGroup = objProductDetailsFill.ProductGroupFill();
+            List<ProductInfo> PInfo = objProductDetailsFill.ProductFill();
 
-            foreach(ProductGroup prod1 in PGroup)
+            foreach(ProductGroup product1 in PGroup)
             {
-                foreach(ProductInfo prod2 in PInfo)
+                foreach(ProductInfo product2 in PInfo)
                 {
-                    if(prod1.ProductGroupID==prod2.GroupID)
+                    if(product1.ProductGroupID==product2.GroupID)
                     {
-                        Console.WriteLine("Product Group Name: " +prod1.ProductGroupName+ " || Product Name: " +prod2.ProductName+ " || Product Description: " +prod2.ProductDescription+ " || Product Rate: " +prod2.ProductRate);
+                        Console.WriteLine("Product Group Name: " +product1.ProductGroupName+ " || Product Name: " +product2.ProductName+ " || Product Description: " +product2.ProductDescription+ " || Product Rate: " +product2.ProductRate);
                     }
                 }
             }
@@ -66,29 +66,29 @@ namespace Product
 
         }
 
-        public void DisplayTracked(string src)
+        public void DisplayTracked(string search)
         {
-            if(src==null)
+            if(search==null)
             Console.WriteLine("Please enter a string!");
 
             else
             {
                 try
                 {
-                ProductDetailsFill pf= new ProductDetailsFill();
+                ProductDetailsFill objProductDetailsFill= new ProductDetailsFill();
 
-                List<ProductGroup> PGroup = pf.ProductGroupFill();
-                List<ProductInfo> PInfo = pf.ProductFill();
+                List<ProductGroup> PGroup = objProductDetailsFill.ProductGroupFill();
+                List<ProductInfo> PInfo = objProductDetailsFill.ProductFill();
 
-                var res=PInfo.Where(p =>p.ProductName.ToUpper().Contains(src.ToUpper()));
+                var res=PInfo.Where(p =>p.ProductName.ToUpper().Contains(search.ToUpper()));
 
-                foreach(ProductGroup prod1 in PGroup)
+                foreach(ProductGroup product1 in PGroup)
                 {
-                    foreach(ProductInfo prod2 in res)
+                    foreach(ProductInfo product2 in res)
                     {
-                        if(prod1.ProductGroupID==prod2.GroupID)
+                        if(product1.ProductGroupID==product2.GroupID)
                         {
-                            Console.WriteLine("Product Group Name: " +prod1.ProductGroupName+ " || Product Name: " +prod2.ProductName+ " || Product Description: " +prod2.ProductDescription+ " || Product Rate: " +prod2.ProductRate);
+                            Console.WriteLine("Product Group Name: " +product1.ProductGroupName+ " || Product Name: " +product2.ProductName+ " || Product Description: " +product2.ProductDescription+ " || Product Rate: " +product2.ProductRate);
                         }
                     }
                 }
@@ -108,20 +108,20 @@ namespace Product
         {
             try
             {
-            ProductDetailsFill pf= new ProductDetailsFill();
+            ProductDetailsFill objProductDetailsFill= new ProductDetailsFill();
 
-            List<ProductGroup> PGroup = pf.ProductGroupFill();
-            List<ProductInfo> PInfo = pf.ProductFill();
+            List<ProductGroup> PGroup = objProductDetailsFill.ProductGroupFill();
+            List<ProductInfo> PInfo = objProductDetailsFill.ProductFill();
 
-            List<ProductInfo> PDel1= pf.ProductDelete1(PInfo);
+            List<ProductInfo> PDel1= objProductDetailsFill.ProductDelete1(PInfo);
 
-            foreach(ProductGroup prod1 in PGroup)
+            foreach(ProductGroup product1 in PGroup)
             {
-                foreach(ProductInfo prod2 in PDel1)
+                foreach(ProductInfo product2 in PDel1)
                 {
-                    if(prod1.ProductGroupID==prod2.GroupID)
+                    if(product1.ProductGroupID==product2.GroupID)
                     {
-                        Console.WriteLine("Product Group Name: " +prod1.ProductGroupName+ " || Product Name: " +prod2.ProductName+ " || Product Description: " +prod2.ProductDescription+ " || Product Rate: " +prod2.ProductRate);
+                        Console.WriteLine("Product Group Name: " +product1.ProductGroupName+ " || Product Name: " +product2.ProductName+ " || Product Description: " +product2.ProductDescription+ " || Product Rate: " +product2.ProductRate);
                     }
                 }
             }
@@ -139,20 +139,20 @@ namespace Product
         {
             try
             {
-            ProductDetailsFill pf= new ProductDetailsFill();
+            ProductDetailsFill objProductDetailsFill= new ProductDetailsFill();
 
-            List<ProductGroup> PGroup = pf.ProductGroupFill();
-            List<ProductInfo> PInfo = pf.ProductFill();
+            List<ProductGroup> PGroup = objProductDetailsFill.ProductGroupFill();
+            List<ProductInfo> PInfo = objProductDetailsFill.ProductFill();
 
-            List<ProductInfo> PDel2= pf.ProductDelete2(PInfo, num);
+            List<ProductInfo> PDel2= objProductDetailsFill.ProductDelete2(PInfo, num);
 
-            foreach(ProductGroup prod1 in PGroup)
+            foreach(ProductGroup product1 in PGroup)
             {
-                foreach(ProductInfo prod2 in PDel2)
+                foreach(ProductInfo product2 in PDel2)
                 {
-                    if(prod1.ProductGroupID==prod2.GroupID)
+                    if(product1.ProductGroupID==product2.GroupID)
                     {
-                        Console.WriteLine("Product Group Name: " +prod1.ProductGroupName+ " || Product Name: " +prod2.ProductName+ " || Product Description: " +prod2.ProductDescription+ " || Product Rate: " +prod2.ProductRate);
+                        Console.WriteLine("Product Group Name: " +product1.ProductGroupName+ " || Product Name: " +product2.ProductName+ " || Product Description: " +product2.ProductDescription+ " || Product Rate: " +product2.ProductRate);
                     }
                 }
             }
@@ -170,20 +170,20 @@ namespace Product
         {
             try
             {
-            ProductDetailsFill pf= new ProductDetailsFill();
+            ProductDetailsFill objProductDetailsFill= new ProductDetailsFill();
 
-            List<ProductGroup> PGroup = pf.ProductGroupFill();
-            List<ProductInfo> PInfo = pf.ProductFill();
+            List<ProductGroup> PGroup = objProductDetailsFill.ProductGroupFill();
+            List<ProductInfo> PInfo = objProductDetailsFill.ProductFill();
 
-            List<ProductInfo> PDel3= pf.ProductDelete3(PInfo, num1, num2);
+            List<ProductInfo> PDel3= objProductDetailsFill.ProductDelete3(PInfo, num1, num2);
 
-            foreach(ProductGroup prod1 in PGroup)
+            foreach(ProductGroup product1 in PGroup)
             {
-                foreach(ProductInfo prod2 in PDel3)
+                foreach(ProductInfo product2 in PDel3)
                 {
-                    if(prod1.ProductGroupID==prod2.GroupID)
+                    if(product1.ProductGroupID==product2.GroupID)
                     {
-                        Console.WriteLine("Product Group Name: " +prod1.ProductGroupName+ " || Product Name: " +prod2.ProductName+ " || Product Description: " +prod2.ProductDescription+ " || Product Rate: " +prod2.ProductRate);
+                        Console.WriteLine("Product Group Name: " +product1.ProductGroupName+ " || Product Name: " +product2.ProductName+ " || Product Description: " +product2.ProductDescription+ " || Product Rate: " +product2.ProductRate);
                     }
                 }
             }

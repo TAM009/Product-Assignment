@@ -1659,6 +1659,19 @@
         "build": {
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "Product.Code/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Microsoft.NETCore.App": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Product.Code.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Product.Code.dll": {}
+        }
       }
     }
   },
@@ -5604,12 +5617,18 @@
         "xunit.runner.visualstudio.2.2.0.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "Product.Code/1.0.0": {
+      "type": "project",
+      "path": "../Product.Code/Product.Code.csproj",
+      "msbuildProject": "../Product.Code/Product.Code.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.NET.Test.Sdk >= 15.3.0-preview-20170628-02",
       "Microsoft.NETCore.App >= 2.0.0",
+      "Product.Code >= 1.0.0",
       "xunit >= 2.2.0",
       "xunit.runner.visualstudio >= 2.2.0"
     ]
@@ -5621,11 +5640,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Assignment 4\\Product.Test\\Product.Test.csproj",
+      "projectUniqueName": "c:\\Users\\Administrator\\Desktop\\ProductProgram\\Product.Test\\Product.Test.csproj",
       "projectName": "Product.Test",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\Assignment 4\\Product.Test\\Product.Test.csproj",
+      "projectPath": "c:\\Users\\Administrator\\Desktop\\ProductProgram\\Product.Test\\Product.Test.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\Assignment 4\\Product.Test\\obj\\",
+      "outputPath": "c:\\Users\\Administrator\\Desktop\\ProductProgram\\Product.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5641,7 +5660,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "c:\\Users\\Administrator\\Desktop\\ProductProgram\\Product.Code\\Product.Code.csproj": {
+              "projectPath": "c:\\Users\\Administrator\\Desktop\\ProductProgram\\Product.Code\\Product.Code.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

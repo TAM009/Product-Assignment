@@ -8,7 +8,7 @@ namespace Product
         {
             try
             {
-                Display d = new Display();
+                Display objDisplay = new Display();
                 int option1, option2,index,start,end;
                 string ch1=null;
                 string ch2=null;
@@ -26,18 +26,18 @@ namespace Product
                     switch(option1)
                     {
                         case 1:Console.WriteLine("-------------------------------------------");
-                               d.DisplayAllItems();
+                               objDisplay.DisplayAllItems();
 
                                break;
 
                         case 2:Console.WriteLine("--------------------------------------------");
-                               d.DisplaySortProd();
+                               objDisplay.DisplaySortProd();
                                break;
 
                         case 3:Console.WriteLine("--------------------------------------------");
                                Console.WriteLine("Please enter the product name you want to search");
                                String str=Console.ReadLine();
-                               d.DisplayTracked(str);
+                               objDisplay.DisplayTracked(str);
 
                                break;
 
@@ -54,20 +54,20 @@ namespace Product
                                     {
                                         case 1:Console.WriteLine("----------------------------------");
                                                Console.WriteLine("Deleting products whose rate is greater than 100");
-                                               d.DisplayAfterDeletion1();
+                                               objDisplay.DisplayAfterDeletion1();
                                                break;
 
                                         case 2:Console.WriteLine("-----------------------------------");
                                                Console.WriteLine("Enter the particular index of the product you want to delete");
                                                index=int.Parse(Console.ReadLine());
-                                               d.DisplayAfterDeletion2(index);
+                                               objDisplay.DisplayAfterDeletion2(index);
                                                break;
 
                                         case 3:Console.WriteLine("------------------------------------");
                                                Console.WriteLine("Enter the start index and number of products following the start you want to remove respectively ");
                                                start=int.Parse(Console.ReadLine());
                                                end=int.Parse(Console.ReadLine());
-                                               d.DisplayAfterDeletion3(start,end);
+                                               objDisplay.DisplayAfterDeletion3(start,end);
                                                break;
 
                                         default:Console.WriteLine("You entered an invalid input!");

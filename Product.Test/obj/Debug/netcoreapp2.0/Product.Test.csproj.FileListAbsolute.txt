@@ -1,0 +1,15 @@
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\bin\Debug\netcoreapp2.0\xunit.runner.utility.netstandard15.dll
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netstandard15.dll
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\bin\Debug\netcoreapp2.0\Product.Test.deps.json
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\bin\Debug\netcoreapp2.0\Product.Test.runtimeconfig.json
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\bin\Debug\netcoreapp2.0\Product.Test.runtimeconfig.dev.json
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\bin\Debug\netcoreapp2.0\Product.Test.dll
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\bin\Debug\netcoreapp2.0\Product.Test.pdb
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\bin\Debug\netcoreapp2.0\Product.Code.dll
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\bin\Debug\netcoreapp2.0\Product.Code.pdb
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\obj\Debug\netcoreapp2.0\Product.Test.csproj.CoreCompileInputs.cache
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\obj\Debug\netcoreapp2.0\Product.Test.AssemblyInfoInputs.cache
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\obj\Debug\netcoreapp2.0\Product.Test.AssemblyInfo.cs
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\obj\Debug\netcoreapp2.0\Product.Test.dll
+c:\Users\Administrator\Desktop\ProductProgram\Product.Test\obj\Debug\netcoreapp2.0\Product.Test.pdb

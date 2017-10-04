@@ -10,19 +10,19 @@ namespace Product
         {
             try
             {
-                ProductDetailsFill pf = new ProductDetailsFill();
+                ProductDetailsFill objProductDetailsFill = new ProductDetailsFill();
 
-                List <ProductGroup> pg= pf.ProductGroupFill();
+                List <ProductGroup> productGroup= objProductDetailsFill.ProductGroupFill();
 
-                foreach( ProductGroup prod in pg)
+                foreach( ProductGroup product in productGroup)
                 {
-                    if(prod.ProductGroupName=="Dairy" && prod.ProductGroupName==str)
+                    if(product.ProductGroupName=="Dairy" && product.ProductGroupName==str)
                     return 1;
-                    else if(prod.ProductGroupName=="Chocolate" && prod.ProductGroupName==str)
+                    else if(product.ProductGroupName=="Chocolate" && product.ProductGroupName==str)
                     return 2;
-                    if(prod.ProductGroupName=="FruitJuice" && prod.ProductGroupName==str)
+                    if(product.ProductGroupName=="FruitJuice" && product.ProductGroupName==str)
                     return 3;
-                    else if(prod.ProductGroupName=="Cakes" && prod.ProductGroupName==str)
+                    else if(product.ProductGroupName=="Cakes" && product.ProductGroupName==str)
                     return 4;
                 }
             }

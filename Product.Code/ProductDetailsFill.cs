@@ -9,44 +9,44 @@ namespace Product
     {
         public List<ProductGroup> ProductGroupFill()
         {
-            ProductGroup pg1 = new ProductGroup()
+            ProductGroup objProductGroup1 = new ProductGroup()
            {
                ProductGroupID = 1,
                ProductGroupName = "Dairy"
            };
 
-           ProductGroup pg2 = new ProductGroup()
+           ProductGroup objProductGroup2 = new ProductGroup()
            {
                ProductGroupID = 2,
                ProductGroupName = "Chocolate"
            };
 
-           ProductGroup pg3 = new ProductGroup()
+           ProductGroup objProductGroup3 = new ProductGroup()
            {
                ProductGroupID = 3,
                ProductGroupName = "FruitJuice"
            };
 
-           ProductGroup pg4 = new ProductGroup()
+           ProductGroup objProductGroup4 = new ProductGroup()
            {
                ProductGroupID = 4,
                ProductGroupName = "Cakes"
            };
 
-           List<ProductGroup> PGroup1= new List<ProductGroup>();
-           PGroup1.Add(pg1);
-           PGroup1.Add(pg2);
-           PGroup1.Add(pg3);
-           PGroup1.Add(pg4);
+           List<ProductGroup> ProductGroup1= new List<ProductGroup>();
+           ProductGroup1.Add(objProductGroup1);
+           ProductGroup1.Add(objProductGroup2);
+           ProductGroup1.Add(objProductGroup3);
+           ProductGroup1.Add(objProductGroup4);
 
-           return PGroup1;
+           return ProductGroup1;
 
         }
 
 
         public List<ProductInfo> ProductFill()
         {
-            ProductInfo pi1=new ProductInfo()
+            ProductInfo objProductInfo1=new ProductInfo()
             {
                 GroupID=FindGroup.FindID("Dairy"),
                 ProductID=1,
@@ -55,7 +55,7 @@ namespace Product
                 ProductRate=115,
             };
 
-            ProductInfo pi2=new ProductInfo()
+            ProductInfo objProductInfo2=new ProductInfo()
             {
                 GroupID=FindGroup.FindID("Dairy"),
                 ProductID=2,
@@ -65,7 +65,7 @@ namespace Product
             };
 
 
-            ProductInfo pi3=new ProductInfo()
+            ProductInfo objProductInfo3=new ProductInfo()
             {
                 GroupID=FindGroup.FindID("Dairy"),
                 ProductID=3,
@@ -75,7 +75,7 @@ namespace Product
             };
 
 
-            ProductInfo pi4=new ProductInfo()
+            ProductInfo objProductInfo4=new ProductInfo()
             {
                 GroupID=FindGroup.FindID("Chocolate"),
                 ProductID=4,
@@ -85,7 +85,7 @@ namespace Product
             };
 
 
-            ProductInfo pi5=new ProductInfo()
+            ProductInfo objProductInfo5=new ProductInfo()
             {
                 GroupID=FindGroup.FindID("FruitJuice"),
                 ProductID=5,
@@ -95,7 +95,7 @@ namespace Product
             };
 
 
-            ProductInfo pi6=new ProductInfo()
+            ProductInfo objProductInfo6=new ProductInfo()
             {
                 GroupID=FindGroup.FindID("Cakes"),
                 ProductID=6,
@@ -105,7 +105,7 @@ namespace Product
             };
 
 
-            ProductInfo pi7=new ProductInfo()
+            ProductInfo objProductInfo7=new ProductInfo()
             {
                 GroupID=FindGroup.FindID("Chocolate"),
                 ProductID=7,
@@ -114,7 +114,7 @@ namespace Product
                 ProductRate=90,
             };
 
-            ProductInfo pi8=new ProductInfo()
+            ProductInfo objProductInfo8=new ProductInfo()
             {
                 GroupID=FindGroup.FindID("Cakes"),
                 ProductID=7,
@@ -123,7 +123,7 @@ namespace Product
                 ProductRate=120,
             }; 
 
-            ProductInfo pi9=new ProductInfo()
+            ProductInfo objProductInfo9=new ProductInfo()
             {
                 GroupID=FindGroup.FindID("FruitJuice"),
                 ProductID=7,
@@ -132,18 +132,18 @@ namespace Product
                 ProductRate=130,
             };
 
-            List<ProductInfo> PInfo1=new List<ProductInfo>();
-            PInfo1.Add(pi1);
-            PInfo1.Add(pi2);
-            PInfo1.Add(pi3);
-            PInfo1.Add(pi4);
-            PInfo1.Add(pi5);
-            PInfo1.Add(pi6);
-            PInfo1.Add(pi7);
-            PInfo1.Add(pi8);
-            PInfo1.Add(pi9);
+            List<ProductInfo> ProductInfo1=new List<ProductInfo>();
+            ProductInfo1.Add(objProductInfo1);
+            ProductInfo1.Add(objProductInfo2);
+            ProductInfo1.Add(objProductInfo3);
+            ProductInfo1.Add(objProductInfo4);
+            ProductInfo1.Add(objProductInfo5);
+            ProductInfo1.Add(objProductInfo6);
+            ProductInfo1.Add(objProductInfo7);
+            ProductInfo1.Add(objProductInfo8);
+            ProductInfo1.Add(objProductInfo9);
 
-            return PInfo1;
+            return ProductInfo1;
 
         }
 
@@ -152,30 +152,31 @@ namespace Product
             return x.ProductName.CompareTo(y.ProductName);
         }
 
-        public  IEnumerable<ProductInfo> ProductSort(List<ProductInfo> PInfo)
+        public IEnumerable<ProductInfo> ProductSort(List<ProductInfo> ProductInfo)
         {
-            ProductDetailsFill P = new ProductDetailsFill();
-            PInfo.Sort(P);
-            return PInfo;
+            ProductDetailsFill objProductDetailsFill = new ProductDetailsFill();
+            ProductInfo.Sort(objProductDetailsFill);
+            return ProductInfo;
         }
 
-        public List<ProductInfo> ProductDelete2(List<ProductInfo> PInfo, int num)
+        public List<ProductInfo> ProductDelete1(List<ProductInfo> ProductInfo)
+        {
+            ProductInfo.RemoveAll( product => product.ProductRate>100);
+            return ProductInfo;
+        }
+
+        public List<ProductInfo> ProductDelete2(List<ProductInfo> ProductInfo, int num)
         {    
-            PInfo.RemoveAt(num);
-            return PInfo;
+            ProductInfo.RemoveAt(num);
+            return ProductInfo;
         } 
 
-         public List<ProductInfo> ProductDelete1(List<ProductInfo> PInfo)
-         {
-             PInfo.RemoveAll( prod => prod.ProductRate>100);
-             return PInfo;
-         }
-         
-         public List<ProductInfo> ProductDelete3(List<ProductInfo> PInfo,int start, int end)
-         {
-             PInfo.RemoveRange(start, end);
-             return PInfo;
-         }
+        
+        public List<ProductInfo> ProductDelete3(List<ProductInfo> ProductInfo,int start, int end)
+        {
+            ProductInfo.RemoveRange(start, end);
+            return ProductInfo;
+        }
                            
 
     }

@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Assignment 4\\Product.Code\\Product.Code.csproj",
+      "projectUniqueName": "c:\\Users\\Administrator\\Desktop\\ProductProgram\\Product.Code\\Product.Code.csproj",
       "projectName": "Product.Code",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\Assignment 4\\Product.Code\\Product.Code.csproj",
+      "projectPath": "c:\\Users\\Administrator\\Desktop\\ProductProgram\\Product.Code\\Product.Code.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\Assignment 4\\Product.Code\\obj\\",
+      "outputPath": "c:\\Users\\Administrator\\Desktop\\ProductProgram\\Product.Code\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

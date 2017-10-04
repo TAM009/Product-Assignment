@@ -8,3 +8,13 @@ C:\Users\Administrator\Desktop\Assignment 4\Product.Code\obj\Debug\netcoreapp2.0
 C:\Users\Administrator\Desktop\Assignment 4\Product.Code\obj\Debug\netcoreapp2.0\Product.Code.AssemblyInfo.cs
 C:\Users\Administrator\Desktop\Assignment 4\Product.Code\obj\Debug\netcoreapp2.0\Product.Code.dll
 C:\Users\Administrator\Desktop\Assignment 4\Product.Code\obj\Debug\netcoreapp2.0\Product.Code.pdb
+c:\Users\Administrator\Desktop\ProductProgram\Product.Code\bin\Debug\netcoreapp2.0\Product.Code.deps.json
+c:\Users\Administrator\Desktop\ProductProgram\Product.Code\bin\Debug\netcoreapp2.0\Product.Code.runtimeconfig.json
+c:\Users\Administrator\Desktop\ProductProgram\Product.Code\bin\Debug\netcoreapp2.0\Product.Code.runtimeconfig.dev.json
+c:\Users\Administrator\Desktop\ProductProgram\Product.Code\bin\Debug\netcoreapp2.0\Product.Code.dll
+c:\Users\Administrator\Desktop\ProductProgram\Product.Code\bin\Debug\netcoreapp2.0\Product.Code.pdb
+c:\Users\Administrator\Desktop\ProductProgram\Product.Code\obj\Debug\netcoreapp2.0\Product.Code.csproj.CoreCompileInputs.cache
+c:\Users\Administrator\Desktop\ProductProgram\Product.Code\obj\Debug\netcoreapp2.0\Product.Code.AssemblyInfoInputs.cache
+c:\Users\Administrator\Desktop\ProductProgram\Product.Code\obj\Debug\netcoreapp2.0\Product.Code.AssemblyInfo.cs
+c:\Users\Administrator\Desktop\ProductProgram\Product.Code\obj\Debug\netcoreapp2.0\Product.Code.dll
+c:\Users\Administrator\Desktop\ProductProgram\Product.Code\obj\Debug\netcoreapp2.0\Product.Code.pdb
