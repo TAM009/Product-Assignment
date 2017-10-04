@@ -36,8 +36,8 @@ namespace Product
 
                         case 3:Console.WriteLine("--------------------------------------------");
                                Console.WriteLine("Please enter the product name you want to search");
-                               String str=Console.ReadLine();
-                               objDisplay.DisplayTracked(str);
+                               String search=Console.ReadLine();
+                               objDisplay.DisplayFoundItems(search);
 
                                break;
 

@@ -66,7 +66,7 @@ namespace Product
 
         }
 
-        public void DisplayTracked(string search)
+        public void DisplayFoundItems(string search)
         {
             if(search==null)
             Console.WriteLine("Please enter a string!");
